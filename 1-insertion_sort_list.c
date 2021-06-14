@@ -15,21 +15,21 @@ void insertion_sort_list(listint_t **list)
 	if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;
 	current = *list;
-	while(current->next != NULL)
+	while (current->next != NULL)
 	{
 		aux = current->next;
-		if(current->n > aux->n)
+		if (current->n > aux->n)
 		{
 			temp = current;
-			while(temp != NULL && temp->n > aux->n)
+			while (temp != NULL && temp->n > aux->n)
 			{
 				temp->next = aux->next;
-				if(temp->next != NULL)
+				if (temp->next != NULL)
 				{
 					temp->next->prev = temp;
 				}
 				aux->prev = temp->prev;
-				if(aux->prev != NULL)
+				if (aux->prev != NULL)
 				{
 					aux->prev->next = aux;
 				}
