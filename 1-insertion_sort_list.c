@@ -4,6 +4,7 @@
  * insertion_sort_list - Insertion sort algorithm
  *
  * @list: linked list to be sorted
+ * Return: sorted array
  *
  */
 
@@ -12,9 +13,9 @@ void insertion_sort_list(listint_t **list)
 	listint_t *current, *aux;
 	listint_t *temp;
 
-	if (list == NULL || *list == NULL || (*list)->next == NULL)
-		return;
 	current = *list;
+	if (list == NULL || *list == NULL || current->next == NULL)
+		return;
 	while (current->next != NULL)
 	{
 		aux = current->next;
